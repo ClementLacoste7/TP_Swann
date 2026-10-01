@@ -1,0 +1,2 @@
+# Interdit les issues vides : il faut passer par un modèle
+blank_issues_enabled: false

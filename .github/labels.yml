@@ -1,0 +1,37 @@
+# Labels du projet, créés automatiquement par le workflow labels.yml
+
+# --- Type ---
+- name: "bug"
+  color: "d73a4a"
+  description: "Quelque chose ne fonctionne pas"
+- name: "enhancement"
+  color: "a2eeef"
+  description: "Nouvelle fonctionnalité ou amélioration"
+- name: "documentation"
+  color: "0075ca"
+  description: "Ajout ou modification de documentation"
+- name: "tests"
+  color: "fbca04"
+  description: "Ajout ou modification de tests"
+- name: "ci"
+  color: "5319e7"
+  description: "Intégration continue et configuration GitHub"
+
+# --- Priorité ---
+- name: "priorité: haute"
+  color: "b60205"
+  description: "À traiter en premier"
+- name: "priorité: moyenne"
+  color: "fbca04"
+  description: "À traiter rapidement"
+- name: "priorité: basse"
+  color: "0e8a16"
+  description: "Peut attendre"
+
+# --- Autres ---
+- name: "bloqué"
+  color: "000000"
+  description: "En attente d'autre chose pour avancer"
+- name: "question"
+  color: "d876e3"
+  description: "Besoin d'une information ou d'une discussion"

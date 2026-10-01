@@ -1,0 +1,50 @@
+name: 🐛 Signaler un bug
+description: Décrire un problème rencontré dans le projet
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du bug
+      description: Explique clairement ce qui ne fonctionne pas.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes pour reproduire
+      placeholder: |
+        1. Lancer ...
+        2. Appeler ...
+        3. Voir l'erreur
+    validations:
+      required: true
+
+  - type: textarea
+    id: attendu
+    attributes:
+      label: Comportement attendu
+      description: Ce qui aurait dû se passer.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: zone
+    attributes:
+      label: Zone concernée
+      options:
+        - Code de l'application (app/)
+        - Tests (tests/)
+        - CI / GitHub (.github/)
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Messages d'erreur / logs
+      description: Copie ici les erreurs éventuelles.
+      render: shell

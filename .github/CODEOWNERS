@@ -1,0 +1,17 @@
+# Fichier CODEOWNERS : définit qui doit relire les modifications de chaque zone.
+# La DERNIÈRE règle qui correspond à un fichier l'emporte.
+
+# Par défaut : tout le projet est relu par les deux membres
+*                       @ClementLacoste7 @ilyaskehili
+
+# Code de l'application
+/app/                   @ClementLacoste7 @ilyaskehili
+
+# Tests
+/tests/                 @ilyaskehili
+
+# CI et configuration GitHub (dont ce fichier)
+/.github/               @ClementLacoste7
+
+# Documentation
+*.md                    @ClementLacoste7 @ilyaskehili

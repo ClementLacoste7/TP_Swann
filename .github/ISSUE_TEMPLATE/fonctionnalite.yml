@@ -1,0 +1,34 @@
+name: ✨ Proposer une fonctionnalité
+description: Suggérer une nouvelle fonctionnalité ou une amélioration
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Besoin
+      description: Quel problème cette fonctionnalité résout-elle ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solution proposée
+      description: Décris ce que tu aimerais voir ajouté.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
+      description: Les autres solutions possibles, s'il y en a.
+
+  - type: checkboxes
+    id: verifications
+    attributes:
+      label: Vérifications
+      options:
+        - label: J'ai vérifié qu'une issue similaire n'existe pas déjà
+          required: true

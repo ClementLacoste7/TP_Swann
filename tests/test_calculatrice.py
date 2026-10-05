@@ -5,6 +5,7 @@ from app.calculatrice import (
     division,
     modulo,
     multiplication,
+    puissance,
     soustraction,
 )
 
@@ -31,7 +32,8 @@ def test_division_par_zero():
 
 
 @pytest.mark.parametrize(
-    "fonction", [addition, soustraction, multiplication, division, modulo]
+    "fonction",
+    [addition, soustraction, multiplication, division, modulo, puissance],
 )
 @pytest.mark.parametrize("a, b", [("2", 3), (2, "3"), (None, 1), (True, 2)])
 def test_parametres_pas_nombres(fonction, a, b):
@@ -50,3 +52,22 @@ def test_modulo():
 def test_modulo_par_zero():
     with pytest.raises(ValueError, match="Modulo par zéro impossible"):
         modulo(10, 0)
+
+
+def test_puissance():
+    assert puissance(2, 3) == 8
+
+
+def test_puissance_exposant_zero():
+    assert puissance(5, 0) == 1
+
+
+def test_puissance_exposant_negatif():
+    assert puissance(2, -1) == 0.5
+
+
+def test_puissance_zero_exposant_negatif():
+    with pytest.raises(
+        ValueError, match="Puissance de zéro avec un exposant négatif impossible"
+    ):
+        puissance(0, -1)

@@ -32,4 +32,4 @@ jobs:
       - name: Installer les dépendances
         run: pip install -r requirements-dev.txt
       - name: Lancer pytest
-        run: pytest -v
+        run: pytest -v --cov=app --cov-report=term-missing

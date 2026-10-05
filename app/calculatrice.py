@@ -6,18 +6,22 @@ def verifier_nombres(*valeurs):
 
 
 def addition(a, b):
+    verifier_nombres(a, b)
     return a + b
 
 
 def soustraction(a, b):
+    verifier_nombres(a, b)
     return a - b
 
 
 def multiplication(a, b):
+    verifier_nombres(a, b)
     return a * b
 
 
 def division(a, b):
+    verifier_nombres(a, b)
     if b == 0:
         raise ValueError("Division par zéro impossible")
     return a / b

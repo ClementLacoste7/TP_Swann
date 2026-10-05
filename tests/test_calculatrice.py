@@ -22,3 +22,16 @@ def test_division():
 def test_division_par_zero():
     with pytest.raises(ValueError):
         division(1, 0)
+
+
+@pytest.mark.parametrize(
+    "fonction", [addition, soustraction, multiplication, division]
+)
+@pytest.mark.parametrize("a, b", [("2", 3), (2, "3"), (None, 1), (True, 2)])
+def test_parametres_pas_nombres(fonction, a, b):
+    with pytest.raises(TypeError, match="Les paramètres doivent être des nombres"):
+        fonction(a, b)
+
+
+def test_decimaux_acceptes():
+    assert addition(1.5, 2) == 3.5

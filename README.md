@@ -45,3 +45,7 @@ flake8 app tests
 ```
 
 La CI GitHub lance ces deux vérifications à chaque push et à chaque Pull Request vers `main` ou `develop`.
+
+## Contribuer
+
+Le fonctionnement des branches, des commits et des Pull Requests est décrit dans [CONTRIBUTING.md](CONTRIBUTING.md).

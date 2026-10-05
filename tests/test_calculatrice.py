@@ -1,6 +1,12 @@
 import pytest
 
-from app.calculatrice import addition, division, multiplication, soustraction
+from app.calculatrice import (
+    addition,
+    division,
+    modulo,
+    multiplication,
+    soustraction,
+)
 
 
 def test_addition():
@@ -25,7 +31,7 @@ def test_division_par_zero():
 
 
 @pytest.mark.parametrize(
-    "fonction", [addition, soustraction, multiplication, division]
+    "fonction", [addition, soustraction, multiplication, division, modulo]
 )
 @pytest.mark.parametrize("a, b", [("2", 3), (2, "3"), (None, 1), (True, 2)])
 def test_parametres_pas_nombres(fonction, a, b):
@@ -35,3 +41,12 @@ def test_parametres_pas_nombres(fonction, a, b):
 
 def test_decimaux_acceptes():
     assert addition(1.5, 2) == 3.5
+
+
+def test_modulo():
+    assert modulo(10, 3) == 1
+
+
+def test_modulo_par_zero():
+    with pytest.raises(ValueError, match="Modulo par zéro impossible"):
+        modulo(10, 0)

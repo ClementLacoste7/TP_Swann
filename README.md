@@ -23,3 +23,25 @@ from app.calculatrice import addition
 
 print(addition(2, 3))  # 5
 ```
+
+## Installation
+
+Il faut Python 3. Depuis la racine du projet :
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+## Lancer les tests
+
+```bash
+pytest
+```
+
+## Vérifier le code (lint)
+
+```bash
+flake8 app tests
+```
+
+La CI GitHub lance ces deux vérifications à chaque push et à chaque Pull Request vers `main` ou `develop`.
